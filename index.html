@@ -9,7 +9,7 @@
 :root{color-scheme:dark;--bg:#0b1020;--panel:#121b30;--panel2:#192641;--line:#293754;--text:#f4f7ff;--muted:#9aa9c3;--blue:#5c8cff;--blue2:#3568e8;--green:#48d6a2;--red:#ff7187}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea{font:inherit}button{border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 15px;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:wait}input,textarea{width:100%;background:#0c1528;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--text);outline:none}input:focus,textarea:focus{border-color:var(--blue)}.muted{color:var(--muted)}.hidden{display:none!important}.small{font-size:12px}.primary{background:var(--blue2)}.ghost{background:var(--panel2);border:1px solid var(--line)}.danger{background:#472334;border:1px solid #784052}
 #login{min-height:100dvh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#243e7a 0,transparent 58%),var(--bg)}.login-card{width:min(430px,100%);padding:28px;border:1px solid var(--line);border-radius:25px;background:#121b30ee;box-shadow:0 25px 80px #0008}.logo{font-weight:950;font-size:26px;letter-spacing:3px}.logo span,.brand span{color:#82a7ff}.login-card p{color:var(--muted);line-height:1.65}.field{margin:20px 0 12px}.field label{display:block;margin-bottom:8px;color:#cbd6eb;font-size:12px;font-weight:800;letter-spacing:1px}.wide{width:100%}
-#app{height:100dvh;max-width:1500px;margin:auto;padding:14px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px}.sidebar,.chat{min-height:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}.sidebar{display:flex;flex-direction:column}.side-head{padding:17px;border-bottom:1px solid var(--line)}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:950;letter-spacing:2px}.me{display:flex;align-items:center;gap:11px;margin-top:17px}.avatar{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#5c8cff,#a36be9);font-weight:850}.avatar img{width:100%;height:100%;object-fit:cover}.me-info{flex:1;min-width:0}.me-info strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.me-info small{color:var(--muted)}.status{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:20px;background:#22365d;color:#c5d7ff;font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.search{padding:13px 13px 6px}.section{padding:10px 16px 6px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:1.3px}.user-list{overflow:auto;padding:0 8px 12px}.user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:13px;cursor:pointer}.user:hover,.user.active{background:var(--panel2)}.user .avatar{width:39px;height:39px}.user-info{min-width:0;flex:1}.user-info strong{display:block;font-size:14px}.user-info small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.verified{color:#68a6ff;font-size:14px}.chat{display:flex;flex-direction:column}.empty{margin:auto;text-align:center;padding:28px;max-width:400px}.empty .symbol{font-size:58px}.empty h2{margin:10px 0 5px}.conversation{display:flex;flex:1;min-height:0;flex-direction:column}.chat-head{display:flex;align-items:center;gap:11px;padding:14px 17px;border-bottom:1px solid var(--line)}.chat-head .avatar{width:41px;height:41px}.peer{flex:1;min-width:0}.peer strong{display:block}.peer small{color:var(--muted)}.messages{flex:1;overflow:auto;padding:19px;display:flex;flex-direction:column;gap:10px}.bubble{max-width:min(78%,560px);align-self:flex-start;padding:10px 13px;background:var(--panel2);border:1px solid #2b3a59;border-radius:15px 15px 15px 4px;overflow-wrap:anywhere;white-space:pre-wrap}.bubble.mine{align-self:flex-end;background:#2854b9;border-color:#416dd0;border-radius:15px 15px 4px 15px}.bubble time{display:block;text-align:right;color:#c7d4ecaa;font-size:10px;margin-top:5px}.composer{display:flex;gap:8px;padding:13px;border-top:1px solid var(--line)}.composer input{flex:1;min-width:0}.hint{padding:0 15px 10px;color:var(--muted);font-size:11px}.toast{position:fixed;z-index:30;left:50%;bottom:24px;transform:translateX(-50%);max-width:90%;padding:11px 16px;border-radius:12px;background:#263653;border:1px solid #465b80;box-shadow:0 8px 30px #0008;text-align:center}.modal-backdrop{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:18px;z-index:20}.modal{width:min(450px,100%);padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.modal h3{margin-top:0}.modal .field{margin:12px 0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+#app{height:100dvh;max-width:1500px;margin:auto;padding:14px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px}.sidebar,.chat{min-height:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}.sidebar{display:flex;flex-direction:column}.side-head{padding:17px;border-bottom:1px solid var(--line)}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:950;letter-spacing:2px}.me{display:flex;align-items:center;gap:11px;margin-top:17px}.avatar{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#5c8cff,#a36be9);font-weight:850}.avatar img{width:100%;height:100%;object-fit:cover}.me-info{flex:1;min-width:0}.me-info strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.me-info small{color:var(--muted)}.status{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:20px;background:#22365d;color:#c5d7ff;font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.search{padding:13px 13px 6px}.section{padding:10px 16px 6px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:1.3px}.user-list{overflow:auto;padding:0 8px 12px}.user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:13px;cursor:pointer}.user:hover,.user.active{background:var(--panel2)}.user .avatar{width:39px;height:39px}.user-info{min-width:0;flex:1}.user-info strong{display:block;font-size:14px}.user-info small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.user-info .last{color:#c5d2e8;font-size:11px;margin-top:3px}.typing{color:#8fb3ff!important}.verified{color:#68a6ff;font-size:14px}.chat{display:flex;flex-direction:column}.empty{margin:auto;text-align:center;padding:28px;max-width:400px}.empty .symbol{font-size:58px}.empty h2{margin:10px 0 5px}.conversation{display:flex;flex:1;min-height:0;flex-direction:column}.chat-head{display:flex;align-items:center;gap:11px;padding:14px 17px;border-bottom:1px solid var(--line)}.chat-head .avatar{width:41px;height:41px}.peer{flex:1;min-width:0}.peer strong{display:block}.peer small{color:var(--muted)}.messages{flex:1;overflow:auto;padding:19px;display:flex;flex-direction:column;gap:10px}.bubble{max-width:min(78%,560px);align-self:flex-start;padding:10px 13px;background:var(--panel2);border:1px solid #2b3a59;border-radius:15px 15px 15px 4px;overflow-wrap:anywhere;white-space:pre-wrap}.bubble.mine{align-self:flex-end;background:#2854b9;border-color:#416dd0;border-radius:15px 15px 4px 15px}.bubble time{display:block;text-align:right;color:#c7d4ecaa;font-size:10px;margin-top:5px}.composer{display:flex;gap:8px;padding:13px;border-top:1px solid var(--line)}.composer input{flex:1;min-width:0}.hint{padding:0 15px 10px;color:var(--muted);font-size:11px}.toast{position:fixed;z-index:30;left:50%;bottom:24px;transform:translateX(-50%);max-width:90%;padding:11px 16px;border-radius:12px;background:#263653;border:1px solid #465b80;box-shadow:0 8px 30px #0008;text-align:center}.modal-backdrop{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:18px;z-index:20}.modal{width:min(450px,100%);padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.modal h3{margin-top:0}.modal .field{margin:12px 0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
 @media(max-width:720px){#app{display:block;padding:0;height:100dvh}.sidebar{height:100%;border:0;border-radius:0}.chat{display:none;height:100dvh;border:0;border-radius:0}.chat.mobile-open{display:flex}.sidebar.mobile-hide{display:none}.side-head{padding:14px}.messages{padding:13px}.chat-head{padding:11px}.bubble{max-width:88%}}
 </style>
 </head>
@@ -38,7 +38,7 @@
   <div class="conversation hidden" id="conversation">
    <header class="chat-head"><button class="ghost small" id="backBtn">←</button><div class="avatar" id="peerAvatar">?</div><div class="peer"><strong id="peerName">Pengguna</strong><small id="peerHandle">@username</small></div><button class="ghost small" id="profileBtn">Profil</button></header>
    <div class="messages" id="messages"></div>
-   <div class="hint">Versi awal: chat teks realtime. Foto/video menyusul setelah layanan penyimpanan alternatif dipasang.</div>
+   <div class="hint" id="chatHint">Pesan realtime · status baca aktif</div>
    <form class="composer" id="sendForm"><input id="message" maxlength="2000" placeholder="Tulis pesan..." autocomplete="off"><button class="primary" type="submit">Kirim</button></form>
   </div>
  </main>
@@ -48,7 +48,7 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, limit, getDocs, addDoc, onSnapshot, serverTimestamp, runTransaction, orderBy } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, limit, addDoc, onSnapshot, serverTimestamp, runTransaction, orderBy, where } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyACTT9myBnp4itlFoGIBA8Ta_181BDTF5Y",
@@ -64,17 +64,42 @@ const auth=getAuth(app);
 const db=getFirestore(app);
 const $=id=>document.getElementById(id);
 const VERIFIED_USERNAME="bimsXnoy";
-let me=null, peer=null, chatId=null, stopMessages=null, stopUsers=null, stopChats=null, users=[], recentChatIds=new Set();
+let me=null, peer=null, chatId=null, stopMessages=null, stopUsers=null, stopChats=null, stopChatMeta=null, users=[], recentChatIds=new Set(), chatDataById=new Map(), typingTimer=null, typingActive=false, lastSeenMessageIds=new Set(), soundReady=false;
 
 function toast(message){$("toast").textContent=message;$("toast").classList.remove("hidden");clearTimeout(toast.timer);toast.timer=setTimeout(()=>$("toast").classList.add("hidden"),3200)}
 function esc(value=""){return String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function verified(user){return user?.username===VERIFIED_USERNAME?'<span class="verified" title="Verified">✔</span>':""}
+function cleanDisplayName(value,fallback){
+ return String(value||"").replace(/[✔✓☑🗸🗹☒]/gu,"").replace(/\p{Extended_Pictographic}/gu,"").replace(/[\uFE0F\u200D]/gu,"").trim().slice(0,40)||fallback;
+}
+function canRead(){return me?.readReceipts!==false}
+function peerReadAt(){return chatDataById.get(chatId)?.readAt?.[peer?.uid]||null}
+function isRead(messageTime){
+ const read=peerReadAt();
+ try{return !!(read&&messageTime&&read.toMillis()>=messageTime.toMillis())}catch{return false}
+}
+function playSound(){
+ if(!soundReady)return;
+ try{
+  const Ctx=window.AudioContext||window.webkitAudioContext,ctx=new Ctx(),osc=ctx.createOscillator(),gain=ctx.createGain();
+  osc.frequency.value=740;gain.gain.setValueAtTime(.0001,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.07,ctx.currentTime+.02);gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.22);
+  osc.connect(gain);gain.connect(ctx.destination);osc.start();osc.stop(ctx.currentTime+.23);osc.onended=()=>ctx.close();
+ }catch{}
+}
+function notifyIncoming(message){
+ playSound();
+ if(document.visibilityState!=="visible" && "Notification" in window && Notification.permission==="granted"){
+  const n=new Notification(peer?.displayName||peer?.username||"Pesan baru",{body:String(message||"Pesan baru").slice(0,100)});
+  n.onclick=()=>{window.focus();n.close()};
+ }
+}
+document.addEventListener("pointerdown",()=>{soundReady=true},{once:true});
 function avatar(el,user){el.innerHTML=user?.photoURL?`<img src="${esc(user.photoURL)}" alt="Foto profil">`:esc((user?.displayName||user?.username||"?").slice(0,1).toUpperCase())}
 function pairId(a,b){return [a,b].sort().join("_")}
 function timeText(timestamp){try{return timestamp?.toDate?timestamp.toDate().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"}):"terkirim"}catch{return""}}
 function showApp(){ $("login").classList.add("hidden");$("app").classList.remove("hidden");renderMe();listenUsers();listenChats(); }
-function renderMe(){ $("myName").innerHTML=esc(me.displayName||me.username)+verified(me);$("myHandle").textContent="@"+me.username;$("myStatus").textContent=me.status||"Belum ada status";avatar($("myAvatar"),me); }
-function stopListeners(){if(stopMessages)stopMessages();if(stopUsers)stopUsers();if(stopChats)stopChats();stopMessages=stopUsers=stopChats=null}
+function renderMe(){ $("myName").innerHTML=esc(cleanDisplayName(me.displayName,me.username))+verified(me);$("myHandle").textContent="@"+me.username;$("myStatus").textContent=me.status||"Belum ada status";avatar($("myAvatar"),me); }
+function stopListeners(){if(stopMessages)stopMessages();if(stopUsers)stopUsers();if(stopChats)stopChats();if(stopChatMeta)stopChatMeta();stopMessages=stopUsers=stopChats=stopChatMeta=null;if(typingTimer)clearTimeout(typingTimer)}
 onAuthStateChanged(auth,async user=>{
  if(!user)return;
  try{
@@ -125,67 +150,121 @@ function listenUsers(){
  },error=>toast("Gagal memuat pengguna: "+error.message));
 }
 function listenChats(){
- stopChats=onSnapshot(query(collection(db,"chats"),limit(200)),snap=>{
-  recentChatIds=new Set(snap.docs.filter(d=>(d.data().participants||[]).includes(me.uid)).map(d=>d.id));renderUsers();
- },error=>console.warn(error));
+ stopChats=onSnapshot(query(collection(db,"chats"),where("participants","array-contains",me.uid),limit(200)),snap=>{
+  chatDataById=new Map(snap.docs.map(d=>[d.id,d.data()]));
+  recentChatIds=new Set(snap.docs.map(d=>d.id));renderUsers();
+ },error=>toast("Gagal memuat daftar chat: "+error.message));
 }
 function renderUsers(){
  const term=$("search").value.trim().toLowerCase();
  const filtered=users.filter(u=>!term||u.username.toLowerCase().includes(term)||(u.displayName||"").toLowerCase().includes(term))
  .sort((a,b)=>(recentChatIds.has(pairId(me.uid,b.uid))?1:0)-(recentChatIds.has(pairId(me.uid,a.uid))?1:0)).slice(0,100);
- $("listTitle").textContent=term?"HASIL PENCARIAN":"PENGGUNA";
- $("userList").innerHTML=filtered.length?filtered.map(u=>`<div class="user ${peer?.uid===u.uid?"active":""}" data-uid="${esc(u.uid)}"><div class="avatar">${u.photoURL?`<img src="${esc(u.photoURL)}" alt="">`:esc((u.displayName||u.username).slice(0,1).toUpperCase())}</div><div class="user-info"><strong>${esc(u.displayName||u.username)} ${verified(u)}</strong><small>@${esc(u.username)}${u.status?" · "+esc(u.status):""}</small></div></div>`).join(""):'<p class="muted small" style="padding:12px">Pengguna tidak ditemukan.</p>';
+ $("listTitle").textContent=term?"HASIL PENCARIAN":"PESAN & PENGGUNA";
+ $("userList").innerHTML=filtered.length?filtered.map(u=>{
+  const data=chatDataById.get(pairId(me.uid,u.uid)),preview=data?.lastMessage||u.status||"Mulai percakapan";
+  const prefix=data?.lastSenderId===me.uid?"Kamu: ":"";
+  return `<div class="user ${peer?.uid===u.uid?"active":""}" data-uid="${esc(u.uid)}"><div class="avatar">${u.photoURL?`<img src="${esc(u.photoURL)}" alt="">`:esc((u.displayName||u.username).slice(0,1).toUpperCase())}</div><div class="user-info"><strong>${esc(cleanDisplayName(u.displayName,u.username))} ${verified(u)}</strong><small>@${esc(u.username)}</small><small class="last">${esc(prefix+preview)}</small></div></div>`;
+ }).join(""):'<p class="muted small" style="padding:12px">Pengguna tidak ditemukan.</p>';
  $("userList").querySelectorAll(".user").forEach(el=>el.onclick=()=>openChat(users.find(u=>u.uid===el.dataset.uid)));
 }
 $("search").addEventListener("input",renderUsers);
 async function openChat(user){
  if(!user)return;
- peer=user;chatId=pairId(me.uid,user.uid);
+ peer=user;chatId=pairId(me.uid,user.uid);lastSeenMessageIds=new Set();
  $("empty").classList.add("hidden");$("conversation").classList.remove("hidden");
- $("peerName").innerHTML=esc(user.displayName||user.username)+verified(user);$("peerHandle").textContent="@"+user.username;avatar($("peerAvatar"),user);
+ $("peerName").innerHTML=esc(cleanDisplayName(user.displayName,user.username))+verified(user);$("peerHandle").textContent="@"+user.username;avatar($("peerAvatar"),user);
+ $("chatHint").textContent="Pesan realtime · status baca "+(canRead()?"aktif":"dimatikan");
  $("sidebar").classList.add("mobile-hide");$("chatPanel").classList.add("mobile-open");renderUsers();
  try{
   await setDoc(doc(db,"chats",chatId),{participants:[me.uid,user.uid].sort(),updatedAt:serverTimestamp()},{merge:true});
-  if(stopMessages)stopMessages();
+  if(stopMessages)stopMessages();if(stopChatMeta)stopChatMeta();
+  let firstMessagesSnapshot=true;
+  stopChatMeta=onSnapshot(doc(db,"chats",chatId),snap=>{
+   const data=snap.data()||{};chatDataById.set(chatId,data);
+   const typing=data.typing||{};
+   $("peerHandle").textContent=typing[peer.uid]?"sedang mengetik…":"@"+peer.username;
+   $("peerHandle").classList.toggle("typing",!!typing[peer.uid]);renderUsers();
+  });
   stopMessages=onSnapshot(query(collection(db,"chats",chatId,"messages"),orderBy("createdAt","asc"),limit(300)),snap=>{
    $("messages").innerHTML="";
    snap.forEach(messageDoc=>{
     const m=messageDoc.data(),mine=m.senderId===me.uid,el=document.createElement("div");
-    el.className="bubble"+(mine?" mine":"");el.innerHTML=esc(m.text||"")+`<time>${mine?"Kamu · ":""}${timeText(m.createdAt)}</time>`;
+    el.className="bubble"+(mine?" mine":"");
+    const readLabel=mine&&canRead()?(isRead(m.createdAt)?" · Dibaca ✓✓":" · Terkirim ✓"):"";
+    el.innerHTML=esc(m.text||"")+`<time>${mine?"Kamu · ":""}${timeText(m.createdAt)}${readLabel}</time>`;
     $("messages").appendChild(el);
+    if(!mine&&!lastSeenMessageIds.has(messageDoc.id)){lastSeenMessageIds.add(messageDoc.id);if(!firstMessagesSnapshot&&!snap.metadata.fromCache)notifyIncoming(m.text)}
    });
    $("messages").scrollTop=$("messages").scrollHeight;
+   firstMessagesSnapshot=false;
+   if(canRead())updateDoc(doc(db,"chats",chatId),{["readAt."+me.uid]:serverTimestamp()}).catch(()=>{});
   },error=>toast("Gagal memuat pesan: "+error.message));
  }catch(error){toast("Tidak bisa membuka chat: "+error.message)}
 }
+$("message").addEventListener("input",()=>{
+ if(!peer||!chatId)return;
+ if(!typingActive){typingActive=true;updateDoc(doc(db,"chats",chatId),{["typing."+me.uid]:true}).catch(()=>{});}
+ clearTimeout(typingTimer);
+ typingTimer=setTimeout(()=>{typingActive=false;updateDoc(doc(db,"chats",chatId),{["typing."+me.uid]:false}).catch(()=>{});},1300);
+});
+$("message").addEventListener("blur",()=>{
+ if(peer&&chatId){typingActive=false;clearTimeout(typingTimer);updateDoc(doc(db,"chats",chatId),{["typing."+me.uid]:false}).catch(()=>{});}
+});
 $("sendForm").onsubmit=async event=>{
  event.preventDefault();const text=$("message").value.trim();if(!text||!peer||!chatId)return;
- $("message").value="";
+ $("message").value="";clearTimeout(typingTimer);typingActive=false;
  try{
   await addDoc(collection(db,"chats",chatId,"messages"),{senderId:me.uid,type:"text",text,createdAt:serverTimestamp()});
-  await updateDoc(doc(db,"chats",chatId),{lastMessage:text.slice(0,100),updatedAt:serverTimestamp()});
+  await updateDoc(doc(db,"chats",chatId),{lastMessage:text.slice(0,100),lastSenderId:me.uid,updatedAt:serverTimestamp(),["typing."+me.uid]:false});
  }catch(error){$("message").value=text;toast("Pesan gagal dikirim: "+error.message)}
 };
 $("backBtn").onclick=()=>{$("sidebar").classList.remove("mobile-hide");$("chatPanel").classList.remove("mobile-open")};
 $("profileBtn").onclick=()=>{if(peer)alert(`${peer.displayName||peer.username} (@${peer.username})\n${peer.bio||"Belum ada bio"}\nStatus: ${peer.status||"-"}`)};
 $("editBtn").onclick=()=>{
  const root=$("modalRoot");
- root.innerHTML=`<div class="modal-backdrop"><div class="modal"><h3>Edit profil</h3>
+ root.innerHTML=`<div class="modal-backdrop"><div class="modal"><h3>Edit profil & pengaturan</h3>
  <div class="field"><label>NAMA TAMPILAN</label><input id="editName" maxlength="40" value="${esc(me.displayName||me.username)}"></div>
  <div class="field"><label>BIO</label><textarea id="editBio" maxlength="160" rows="2">${esc(me.bio||"")}</textarea></div>
  <div class="field"><label>STATUS</label><input id="editStatus" maxlength="80" value="${esc(me.status||"")}" placeholder="Sedang apa hari ini?"></div>
- <div class="field"><label>URL FOTO PROFIL (OPSIONAL)</label><input id="editPhoto" maxlength="500" value="${esc(me.photoURL||"")}" placeholder="https://..."></div>
- <p class="muted small">Untuk sementara foto profil memakai URL gambar publik. Upload langsung belum aktif karena Firebase Storage meminta upgrade.</p>
+ <div class="field"><label>FOTO PROFIL DARI GALERI</label><input id="photoFile" type="file" accept="image/*"><div style="display:flex;gap:12px;align-items:center;margin-top:10px"><div class="avatar" id="photoPreview" style="width:76px;height:76px">${me.photoURL?`<img src="${esc(me.photoURL)}" alt="">`:"?"}</div><small class="muted">Pilih foto, lalu sistem memotong bagian tengah menjadi persegi dan menampilkannya bulat.</small></div></div>
+ <label style="display:flex;gap:9px;align-items:center;margin:14px 0"><input id="readToggle" type="checkbox" style="width:auto" ${canRead()?"checked":""}> Laporan dibaca (centang biru)</label>
+ <label style="display:flex;gap:9px;align-items:center;margin:14px 0"><input id="notifToggle" type="checkbox" style="width:auto" ${("Notification" in window&&Notification.permission==="granted")?"checked":""}> Izinkan notifikasi browser</label>
+ <p class="muted small">Foto dikompres dan disimpan di Firestore. Notifikasi saat situs terbuka didukung; notifikasi saat Chrome tertutup perlu konfigurasi Push server.</p>
  <div class="modal-actions"><button class="ghost" id="cancelEdit">Batal</button><button id="saveEdit">Simpan</button></div></div></div>`;
+ let photoData=me.photoURL||"";
+ $("photoFile").onchange=e=>{
+  const file=e.target.files?.[0];if(!file)return;
+  if(!file.type.startsWith("image/")){toast("Pilih file gambar.");return}
+  if(file.size>8*1024*1024){toast("Ukuran foto maksimal 8 MB.");return}
+  const img=new Image(),url=URL.createObjectURL(file);
+  img.onload=()=>{
+   const side=Math.min(img.width,img.height),sx=(img.width-side)/2,sy=(img.height-side)/2;
+   const canvas=document.createElement("canvas");canvas.width=256;canvas.height=256;
+   canvas.getContext("2d").drawImage(img,sx,sy,side,side,0,0,256,256);
+   photoData=canvas.toDataURL("image/jpeg",.62);
+   $("photoPreview").innerHTML=`<img src="${photoData}" alt="Preview foto">`;
+   URL.revokeObjectURL(url);
+   if(photoData.length>850000)toast("Foto terlalu besar. Pilih foto lain.");
+  };
+  img.onerror=()=>{URL.revokeObjectURL(url);toast("Gagal membaca gambar.")};img.src=url;
+ };
  $("cancelEdit").onclick=()=>root.innerHTML="";
+ $("notifToggle").onchange=async e=>{
+  if(e.target.checked&&"Notification" in window){
+   const permission=await Notification.requestPermission();
+   if(permission!=="granted"){e.target.checked=false;toast("Izin notifikasi tidak diberikan.");}
+  }
+ };
  $("saveEdit").onclick=async()=>{
-  const displayName=$("editName").value.trim().slice(0,40)||me.username;
-  const bio=$("editBio").value.trim().slice(0,160),status=$("editStatus").value.trim().slice(0,80),photoURL=$("editPhoto").value.trim().slice(0,500);
-  if(photoURL&&!/^https:\/\/\S+$/i.test(photoURL)){toast("URL foto harus diawali https://");return}
+  const displayName=cleanDisplayName($("editName").value,me.username);
+  const bio=$("editBio").value.trim().slice(0,160),status=$("editStatus").value.trim().slice(0,80),readReceipts=$("readToggle").checked;
+  if(photoData.length>900000){toast("Foto terlalu besar untuk Firestore. Pilih foto lain.");return}
   try{
-   await updateDoc(doc(db,"users",me.uid),{displayName,bio,status,photoURL,updatedAt:serverTimestamp()});
-   Object.assign(me,{displayName,bio,status,photoURL});renderMe();root.innerHTML="";toast("Profil berhasil diperbarui");
-  }catch(error){toast("Gagal menyimpan profil: "+error.message)}
+   await updateDoc(doc(db,"users",me.uid),{displayName,bio,status,photoURL:photoData,readReceipts,updatedAt:serverTimestamp()});
+   Object.assign(me,{displayName,bio,status,photoURL:photoData,readReceipts});renderMe();root.innerHTML="";
+   if(chatId)$("chatHint").textContent="Pesan realtime · status baca "+(canRead()?"aktif":"dimatikan");
+   toast("Profil dan pengaturan berhasil disimpan");
+  }catch(error){toast("Gagal menyimpan: "+error.message+" · Periksa Firestore Rules.")}
  };
 };
 </script>
