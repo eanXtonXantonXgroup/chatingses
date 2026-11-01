@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,9 +7,9 @@
 <title>CHATINGSES — Chat Your Way</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#121b30;--panel2:#192641;--line:#293754;--text:#f4f7ff;--muted:#9aa9c3;--blue:#5c8cff;--blue2:#3568e8;--green:#48d6a2;--red:#ff7187}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea{font:inherit}button{border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 15px;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:wait}input,textarea{width:100%;background:#0c1528;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--text);outline:none}input:focus,textarea:focus{border-color:var(--blue)}.muted{color:var(--muted)}.hidden{display:none!important}.small{font-size:12px}.primary{background:var(--blue2)}.ghost{background:var(--panel2);border:1px solid var(--line)}.danger{background:#472334;border:1px solid #784052}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea{font:inherit}button{border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 15px;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:wait}input,textarea{width:100%;background:#0c1528;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--text);outline:none}input:focus,textarea:focus{border-color:var(--line);outline:none;box-shadow:none}button:focus,button:focus-visible{outline:none;box-shadow:none}button{-webkit-tap-highlight-color:transparent}*{-webkit-tap-highlight-color:transparent}*{scrollbar-width:none}*::-webkit-scrollbar{display:none;width:0;height:0}.muted{color:var(--muted)}.hidden{display:none!important}.small{font-size:12px}.primary{background:var(--blue2)}.ghost{background:var(--panel2);border:1px solid var(--line)}.danger{background:#472334;border:1px solid #784052}
 #login{min-height:100dvh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#243e7a 0,transparent 58%),var(--bg)}.login-card{width:min(430px,100%);padding:28px;border:1px solid var(--line);border-radius:25px;background:#121b30ee;box-shadow:0 25px 80px #0008}.logo{font-weight:950;font-size:26px;letter-spacing:3px}.logo span,.brand span{color:#82a7ff}.login-card p{color:var(--muted);line-height:1.65}.field{margin:20px 0 12px}.field label{display:block;margin-bottom:8px;color:#cbd6eb;font-size:12px;font-weight:800;letter-spacing:1px}.wide{width:100%}
-#app{height:100dvh;max-width:1500px;margin:auto;padding:14px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px}.sidebar,.chat{min-height:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}.sidebar{display:flex;flex-direction:column}.side-head{padding:17px;border-bottom:1px solid var(--line)}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:950;letter-spacing:2px}.me{display:flex;align-items:center;gap:11px;margin-top:17px}.avatar{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#5c8cff,#a36be9);font-weight:850}.avatar img{width:100%;height:100%;object-fit:cover}.me-info{flex:1;min-width:0}.me-info strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.me-info small{color:var(--muted)}.status{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:20px;background:#22365d;color:#c5d7ff;font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.search{padding:13px 13px 6px}.section{padding:10px 16px 6px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:1.3px}.user-list{overflow:auto;padding:0 8px 12px}.user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:13px;cursor:pointer}.user:hover,.user.active{background:var(--panel2)}.user .avatar{width:39px;height:39px}.user-info{min-width:0;flex:1}.user-info strong{display:block;font-size:14px}.user-info small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.user-info .last{color:#c5d2e8;font-size:11px;margin-top:3px}.typing{color:#8fb3ff!important}.verified{color:#68a6ff;font-size:14px}.chat{display:flex;flex-direction:column}.empty{margin:auto;text-align:center;padding:28px;max-width:400px}.empty .symbol{font-size:58px}.empty h2{margin:10px 0 5px}.conversation{display:flex;flex:1;min-height:0;flex-direction:column}.chat-head{display:flex;align-items:center;gap:11px;padding:14px 17px;border-bottom:1px solid var(--line)}.chat-head .avatar{width:41px;height:41px}.peer{flex:1;min-width:0}.peer strong{display:block}.peer small{color:var(--muted)}.messages{flex:1;overflow:auto;padding:19px;display:flex;flex-direction:column;gap:10px}.bubble{max-width:min(78%,560px);align-self:flex-start;padding:10px 13px;background:var(--panel2);border:1px solid #2b3a59;border-radius:15px 15px 15px 4px;overflow-wrap:anywhere;white-space:pre-wrap}.bubble.mine{align-self:flex-end;background:#2854b9;border-color:#416dd0;border-radius:15px 15px 4px 15px}.bubble time{display:block;text-align:right;color:#c7d4ecaa;font-size:10px;margin-top:5px}.composer{display:flex;gap:8px;padding:13px;border-top:1px solid var(--line)}.composer input{flex:1;min-width:0}.hint{padding:0 15px 10px;color:var(--muted);font-size:11px}.toast{position:fixed;z-index:30;left:50%;bottom:24px;transform:translateX(-50%);max-width:90%;padding:11px 16px;border-radius:12px;background:#263653;border:1px solid #465b80;box-shadow:0 8px 30px #0008;text-align:center}.modal-backdrop{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:18px;z-index:20}.modal{width:min(450px,100%);padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.modal h3{margin-top:0}.modal .field{margin:12px 0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+#app{height:100dvh;max-width:1500px;margin:auto;padding:14px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px}.sidebar,.chat{min-height:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}.sidebar{display:flex;flex-direction:column}.side-head{padding:17px;border-bottom:1px solid var(--line)}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:950;letter-spacing:2px}.me{display:flex;align-items:center;gap:11px;margin-top:17px}.avatar{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#5c8cff,#a36be9);font-weight:850}.avatar img{width:100%;height:100%;object-fit:cover}.me-info{flex:1;min-width:0}.me-info strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.me-info small{color:var(--muted)}.status{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:20px;background:#22365d;color:#c5d7ff;font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.search{padding:13px 13px 6px}.section{padding:10px 16px 6px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:1.3px}.user-list{overflow:auto;padding:0 8px 12px}.user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:13px;cursor:pointer}.user:hover,.user.active{background:var(--panel2)}.user .avatar{width:39px;height:39px}.user-avatar-wrap{position:relative;flex:none}.online-dot{position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#39d98a;border:2px solid var(--panel)}.offline-dot{background:#7d8796}.online-label{font-size:10px!important;color:#39b982!important}.user-info{min-width:0;flex:1}.user-info strong{display:block;font-size:14px}.user-info small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.user-info .last{color:#c5d2e8;font-size:11px;margin-top:3px}.typing{color:#8fb3ff!important}.verified{color:#68a6ff;font-size:14px}.chat{display:flex;flex-direction:column}.empty{margin:auto;text-align:center;padding:28px;max-width:400px}.empty .symbol{font-size:58px}.empty h2{margin:10px 0 5px}.conversation{display:flex;flex:1;min-height:0;flex-direction:column}.chat-head{display:flex;align-items:center;gap:11px;padding:14px 17px;border-bottom:1px solid var(--line)}.chat-head .avatar{width:41px;height:41px}.peer{flex:1;min-width:0}.peer strong{display:block}.peer small{color:var(--muted)}.messages{flex:1;overflow:auto;padding:19px;display:flex;flex-direction:column;gap:10px;position:relative;isolation:isolate}.messages::before{content:"";position:absolute;inset:0;z-index:0;background-image:var(--chat-wallpaper,none);background-size:cover;background-position:center;background-repeat:no-repeat;opacity:var(--wallpaper-opacity,0.35);pointer-events:none}.bubble{position:relative;z-index:1}.bubble{max-width:min(78%,560px);align-self:flex-start;padding:10px 13px;background:var(--panel2);border:1px solid #2b3a59;border-radius:15px 15px 15px 4px;overflow-wrap:anywhere;white-space:pre-wrap}.bubble.mine{align-self:flex-end;background:#2854b9;border-color:#416dd0;border-radius:15px 15px 4px 15px}.bubble time{display:block;text-align:right;color:#c7d4ecaa;font-size:10px;margin-top:5px}.composer{display:flex;gap:8px;padding:13px;border-top:1px solid var(--line)}.composer input{flex:1;min-width:0}.hint{padding:0 15px 10px;color:var(--muted);font-size:11px}.toast{position:fixed;z-index:30;left:50%;bottom:24px;transform:translateX(-50%);max-width:90%;padding:11px 16px;border-radius:12px;background:#263653;border:1px solid #465b80;box-shadow:0 8px 30px #0008;text-align:center}.modal-backdrop{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:18px;z-index:20}.modal{width:min(450px,100%);max-height:min(88dvh,760px);overflow:auto;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.modal h3{margin-top:0}.modal .field{margin:12px 0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
 @media(max-width:720px){#app{display:block;padding:0;height:100dvh}.sidebar{height:100%;border:0;border-radius:0}.chat{display:none;height:100dvh;border:0;border-radius:0}.chat.mobile-open{display:flex}.sidebar.mobile-hide{display:none}.side-head{padding:14px}.messages{padding:13px}.chat-head{padding:11px}.bubble{max-width:88%}}
 
 /* THEME: DARK — clean, compact, understated */
@@ -152,7 +151,7 @@ const auth=getAuth(app);
 const db=getFirestore(app);
 const $=id=>document.getElementById(id);
 const VERIFIED_USERNAME="bimsXnoy";
-let me=null, peer=null, chatId=null, stopMessages=null, stopUsers=null, stopChats=null, stopChatMeta=null, users=[], recentChatIds=new Set(), chatDataById=new Map(), typingTimer=null, typingActive=false, lastSeenMessageIds=new Set(), soundReady=false;
+let me=null, peer=null, chatId=null, stopMessages=null, stopUsers=null, stopChats=null, stopChatMeta=null, users=[], recentChatIds=new Set(), chatDataById=new Map(), typingTimer=null, typingActive=false, lastSeenMessageIds=new Set(), soundReady=false, currentMessageDocs=[];
 
 function toast(message){$("toast").textContent=message;$("toast").classList.remove("hidden");clearTimeout(toast.timer);toast.timer=setTimeout(()=>$("toast").classList.add("hidden"),3200)}
 function esc(value=""){return String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
@@ -161,6 +160,9 @@ function cleanDisplayName(value,fallback){
  return String(value||"").replace(/[✔✓☑🗸🗹☒]/gu,"").replace(/\p{Extended_Pictographic}/gu,"").replace(/[\uFE0F\u200D]/gu,"").trim().slice(0,40)||fallback;
 }
 function canRead(){return me?.readReceipts!==false}
+function isOnline(user){try{return !!(user?.lastActiveAt?.toMillis&&Date.now()-user.lastActiveAt.toMillis()<90000)}catch{return false}}
+function onlineText(user){return isOnline(user)?"● Online":"○ Offline"}
+function setWallpaper(data,opacity){const value=data?`url("${data}")`:"none";document.documentElement.style.setProperty("--chat-wallpaper",value);document.documentElement.style.setProperty("--wallpaper-opacity",String(opacity));}
 function peerReadAt(){return chatDataById.get(chatId)?.readAt?.[peer?.uid]||null}
 function isRead(messageTime){
  const read=peerReadAt();
@@ -185,9 +187,15 @@ document.addEventListener("pointerdown",()=>{soundReady=true},{once:true});
 function avatar(el,user){el.innerHTML=user?.photoURL?`<img src="${esc(user.photoURL)}" alt="Foto profil">`:esc((user?.displayName||user?.username||"?").slice(0,1).toUpperCase())}
 function pairId(a,b){return [a,b].sort().join("_")}
 function timeText(timestamp){try{return timestamp?.toDate?timestamp.toDate().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"}):"terkirim"}catch{return""}}
-function showApp(){ $("login").classList.add("hidden");$("app").classList.remove("hidden");renderMe();listenUsers();listenChats(); }
+function showApp(){ $("login").classList.add("hidden");$("app").classList.remove("hidden");renderMe();listenUsers();listenChats();startPresence(); }
+let presenceTimer=null;
+function startPresence(){
+ const ping=()=>{if(me)updateDoc(doc(db,"users",me.uid),{lastActiveAt:serverTimestamp()}).catch(()=>{});};
+ ping();if(presenceTimer)clearInterval(presenceTimer);presenceTimer=setInterval(ping,30000);
+ document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")ping()});
+}
 function renderMe(){ $("myName").innerHTML=esc(cleanDisplayName(me.displayName,me.username))+verified(me);$("myHandle").textContent="@"+me.username;$("myStatus").textContent=me.status||"Belum ada status";avatar($("myAvatar"),me); }
-function stopListeners(){if(stopMessages)stopMessages();if(stopUsers)stopUsers();if(stopChats)stopChats();if(stopChatMeta)stopChatMeta();stopMessages=stopUsers=stopChats=stopChatMeta=null;if(typingTimer)clearTimeout(typingTimer)}
+function stopListeners(){if(presenceTimer)clearInterval(presenceTimer);presenceTimer=null;if(stopMessages)stopMessages();if(stopUsers)stopUsers();if(stopChats)stopChats();if(stopChatMeta)stopChatMeta();stopMessages=stopUsers=stopChats=stopChatMeta=null;if(typingTimer)clearTimeout(typingTimer)}
 onAuthStateChanged(auth,async user=>{
  if(!user)return;
  try{
@@ -234,7 +242,7 @@ $("logoutBtn").onclick=()=>{
 };
 function listenUsers(){
  stopUsers=onSnapshot(query(collection(db,"users"),limit(200)),snap=>{
-  users=snap.docs.map(d=>({uid:d.id,...d.data()})).filter(u=>u.uid!==me.uid);renderUsers();
+  users=snap.docs.map(d=>({uid:d.id,...d.data()})).filter(u=>u.uid!==me.uid);if(peer){const fresh=users.find(u=>u.uid===peer.uid);if(fresh){peer=fresh;$("peerHandle").textContent="@"+peer.username+" · "+onlineText(peer);}}renderUsers();
  },error=>toast("Gagal memuat pengguna: "+error.message));
 }
 function listenChats(){
@@ -251,16 +259,26 @@ function renderUsers(){
  $("userList").innerHTML=filtered.length?filtered.map(u=>{
   const data=chatDataById.get(pairId(me.uid,u.uid)),preview=data?.lastMessage||u.status||"Mulai percakapan";
   const prefix=data?.lastSenderId===me.uid?"Kamu: ":"";
-  return `<div class="user ${peer?.uid===u.uid?"active":""}" data-uid="${esc(u.uid)}"><div class="avatar">${u.photoURL?`<img src="${esc(u.photoURL)}" alt="">`:esc((u.displayName||u.username).slice(0,1).toUpperCase())}</div><div class="user-info"><strong>${esc(cleanDisplayName(u.displayName,u.username))} ${verified(u)}</strong><small>@${esc(u.username)}</small><small class="last">${esc(prefix+preview)}</small></div></div>`;
+  return `<div class="user ${peer?.uid===u.uid?"active":""}" data-uid="${esc(u.uid)}"><div class="user-avatar-wrap"><div class="avatar">${u.photoURL?`<img src="${esc(u.photoURL)}" alt="">`:esc((u.displayName||u.username).slice(0,1).toUpperCase())}</div><i class="online-dot ${isOnline(u)?"":"offline-dot"}"></i></div><div class="user-info"><strong>${esc(cleanDisplayName(u.displayName,u.username))} ${verified(u)}</strong><small>@${esc(u.username)} · ${onlineText(u)}</small><small class="last">${esc(prefix+preview)}</small></div></div>`;
  }).join(""):'<p class="muted small" style="padding:12px">Pengguna tidak ditemukan.</p>';
  $("userList").querySelectorAll(".user").forEach(el=>el.onclick=()=>openChat(users.find(u=>u.uid===el.dataset.uid)));
 }
 $("search").addEventListener("input",renderUsers);
+function renderMessageReceipts(){
+ const nodes=$("messages")?.querySelectorAll(".bubble.mine")||[];
+ nodes.forEach(el=>{
+  const messageDoc=currentMessageDocs.find(d=>d.id===el.dataset.messageId);
+  const m=messageDoc?.data?.();if(!m)return;
+  const node=el.querySelector("time");if(!node)return;
+  const suffix=canRead()?(isRead(m.createdAt)?" · Dibaca ✓✓":" · Terkirim ✓"):"";
+  node.textContent=`Kamu · ${timeText(m.createdAt)}${suffix}`;
+ });
+}
 async function openChat(user){
  if(!user)return;
  peer=user;chatId=pairId(me.uid,user.uid);lastSeenMessageIds=new Set();
  $("empty").classList.add("hidden");$("conversation").classList.remove("hidden");
- $("peerName").innerHTML=esc(cleanDisplayName(user.displayName,user.username))+verified(user);$("peerHandle").textContent="@"+user.username;avatar($("peerAvatar"),user);
+ $("peerName").innerHTML=esc(cleanDisplayName(user.displayName,user.username))+verified(user);$("peerHandle").textContent="@"+user.username+" · "+onlineText(user);avatar($("peerAvatar"),user);
  $("chatHint").textContent="Pesan realtime · status baca "+(canRead()?"aktif":"dimatikan");
  $("sidebar").classList.add("mobile-hide");$("chatPanel").classList.add("mobile-open");renderUsers();
  try{
@@ -268,16 +286,16 @@ async function openChat(user){
   if(stopMessages)stopMessages();if(stopChatMeta)stopChatMeta();
   let firstMessagesSnapshot=true;
   stopChatMeta=onSnapshot(doc(db,"chats",chatId),snap=>{
-   const data=snap.data()||{};chatDataById.set(chatId,data);
+   const data=snap.data()||{};chatDataById.set(chatId,data);renderMessageReceipts();
    const typing=data.typing||{};
-   $("peerHandle").textContent=typing[peer.uid]?"sedang mengetik…":"@"+peer.username;
+   $("peerHandle").textContent=typing[peer.uid]?"sedang mengetik…":"@"+peer.username+" · "+onlineText(peer);
    $("peerHandle").classList.toggle("typing",!!typing[peer.uid]);renderUsers();
   });
   stopMessages=onSnapshot(query(collection(db,"chats",chatId,"messages"),orderBy("createdAt","asc"),limit(300)),snap=>{
    $("messages").innerHTML="";
    snap.forEach(messageDoc=>{
     const m=messageDoc.data(),mine=m.senderId===me.uid,el=document.createElement("div");
-    el.className="bubble"+(mine?" mine":"");
+    el.className="bubble"+(mine?" mine":"");el.dataset.messageId=messageDoc.id;
     const readLabel=mine&&canRead()?(isRead(m.createdAt)?" · Dibaca ✓✓":" · Terkirim ✓"):"";
     el.innerHTML=esc(m.text||"")+`<time>${mine?"Kamu · ":""}${timeText(m.createdAt)}${readLabel}</time>`;
     $("messages").appendChild(el);
@@ -318,16 +336,21 @@ function applyTheme(theme,save=true){
  document.querySelectorAll("[data-theme-choice]").forEach(btn=>btn.classList.toggle("active",btn.dataset.themeChoice===selected));
 }
 applyTheme(localStorage.getItem("chatinges_theme")||"dark",false);
+setWallpaper(localStorage.getItem("chatinges_wallpaper")||"",Number(localStorage.getItem("chatinges_wallpaper_opacity")||38)/100);
 
 $("editBtn").onclick=()=>{
  const root=$("modalRoot");
- root.innerHTML=`<div class="modal-backdrop"><div class="modal"><h3>⚙ Pengaturan CHATINGSES</h3>
+ root.innerHTML=`<div class="modal-backdrop"><div class="modal"><div class="modal-title-row"><h3>⚙ Pengaturan CHATINGSES</h3><button type="button" class="modal-close" id="closeSettings" aria-label="Tutup">×</button></div>
  <div class="settings-section-title">PILIH TEMA TAMPILAN</div>
  <div class="theme-options">
   <button type="button" class="theme-choice" data-theme-choice="dark"><div class="theme-swatch dark"></div><strong>Dark</strong><small>Minimal & tenang</small></button>
   <button type="button" class="theme-choice" data-theme-choice="fantasy"><div class="theme-swatch fantasy"></div><strong>Fantasy</strong><small>Elegan & hangat</small></button>
   <button type="button" class="theme-choice" data-theme-choice="sky"><div class="theme-swatch sky"></div><strong>Sky</strong><small>Cerah & ringan</small></button>
  </div>
+ <div class="settings-section-title">WALLPAPER CHAT</div>
+ <div class="field"><label>GAMBAR WALLPAPER</label><input id="wallpaperFile" type="file" accept="image/*"><div class="wallpaper-preview" id="wallpaperPreview"></div></div>
+ <div class="wallpaper-range"><label for="wallpaperOpacity" class="small">Transparansi wallpaper</label><input id="wallpaperOpacity" type="range" min="5" max="100" value="38"><strong id="wallpaperOpacityValue" class="small">38%</strong></div>
+ <div class="wallpaper-tools"><button type="button" class="ghost small" id="removeWallpaper">Hapus wallpaper</button><small class="muted">Wallpaper tersimpan di browser/perangkat ini.</small></div>
  <div class="settings-section-title">PROFIL</div>
  <div class="field"><label>NAMA TAMPILAN</label><input id="editName" maxlength="40" value="${esc(me.displayName||me.username)}"></div>
  <div class="field"><label>BIO</label><textarea id="editBio" maxlength="160" rows="2">${esc(me.bio||"")}</textarea></div>
@@ -336,11 +359,44 @@ $("editBtn").onclick=()=>{
  <label style="display:flex;gap:9px;align-items:center;margin:14px 0"><input id="readToggle" type="checkbox" style="width:auto" ${canRead()?"checked":""}> Laporan dibaca (centang biru)</label>
  <label style="display:flex;gap:9px;align-items:center;margin:14px 0"><input id="notifToggle" type="checkbox" style="width:auto" ${("Notification" in window&&Notification.permission==="granted")?"checked":""}> Izinkan notifikasi browser</label>
  <p class="muted small">Foto dikompres dan disimpan di Firestore. Notifikasi saat situs terbuka didukung; notifikasi saat Chrome tertutup perlu konfigurasi Push server.</p>
- <div class="modal-actions"><button class="ghost" id="cancelEdit">Batal</button><button id="saveEdit">Simpan</button></div></div></div>`;
+ <div class="modal-actions"><button class="ghost" id="cancelEdit">Tutup</button><button id="saveEdit">Setujui & Simpan</button></div></div></div>`;
+ const savedWallpaper=localStorage.getItem("chatinges_wallpaper")||"";
+ let wallpaperData=savedWallpaper;
+ const savedOpacity=Number(localStorage.getItem("chatinges_wallpaper_opacity")||38);
+ $("wallpaperOpacity").value=String(savedOpacity);
+ $("wallpaperOpacityValue").textContent=savedOpacity+"%";
+ $("wallpaperPreview").style.backgroundImage=wallpaperData?`url("${wallpaperData}")`:"none";
+ setWallpaper(wallpaperData,savedOpacity/100);
+ const closeSettings=()=>{root.innerHTML="";};
+ $("closeSettings").onclick=closeSettings;
+ $("cancelEdit").onclick=closeSettings;
+ root.querySelector(".modal-backdrop").addEventListener("click",e=>{if(e.target.classList.contains("modal-backdrop"))closeSettings();});
+ $("wallpaperOpacity").oninput=e=>{
+  const opacity=Number(e.target.value);$("wallpaperOpacityValue").textContent=opacity+"%";setWallpaper(wallpaperData,opacity/100);
+ };
+ $("wallpaperFile").onchange=e=>{
+  const file=e.target.files?.[0];if(!file)return;
+  if(!file.type.startsWith("image/")){toast("Pilih file gambar.");return}
+  if(file.size>10*1024*1024){toast("Ukuran wallpaper maksimal 10 MB.");return}
+  const img=new Image(),url=URL.createObjectURL(file);
+  img.onload=()=>{
+   const scale=Math.min(1,1400/Math.max(img.width,img.height)),w=Math.round(img.width*scale),h=Math.round(img.height*scale);
+   const canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;
+   canvas.getContext("2d").drawImage(img,0,0,w,h);
+   wallpaperData=canvas.toDataURL("image/jpeg",.58);
+   $("wallpaperPreview").style.backgroundImage=`url("${wallpaperData}")`;
+   setWallpaper(wallpaperData,Number($("wallpaperOpacity").value)/100);
+   URL.revokeObjectURL(url);
+   if(wallpaperData.length>650000)toast("Wallpaper masih besar; pilih gambar lain agar browser tidak berat.");
+  };
+  img.onerror=()=>{URL.revokeObjectURL(url);toast("Gagal membaca wallpaper.")};img.src=url;
+ };
+ $("removeWallpaper").onclick=()=>{wallpaperData="";$("wallpaperPreview").style.backgroundImage="none";setWallpaper("",Number($("wallpaperOpacity").value)/100);};
  root.querySelectorAll("[data-theme-choice]").forEach(btn=>{
   btn.onclick=()=>applyTheme(btn.dataset.themeChoice);
  });
  applyTheme(localStorage.getItem("chatinges_theme")||"dark",false);
+setWallpaper(localStorage.getItem("chatinges_wallpaper")||"",Number(localStorage.getItem("chatinges_wallpaper_opacity")||38)/100);
  let photoData=me.photoURL||"";
  $("photoFile").onchange=e=>{
   const file=e.target.files?.[0];if(!file)return;
@@ -358,7 +414,7 @@ $("editBtn").onclick=()=>{
   };
   img.onerror=()=>{URL.revokeObjectURL(url);toast("Gagal membaca gambar.")};img.src=url;
  };
- $("cancelEdit").onclick=()=>root.innerHTML="";
+
  $("notifToggle").onchange=async e=>{
   if(e.target.checked&&"Notification" in window){
    const permission=await Notification.requestPermission();
@@ -371,6 +427,10 @@ $("editBtn").onclick=()=>{
   if(photoData.length>900000){toast("Foto terlalu besar untuk Firestore. Pilih foto lain.");return}
   try{
    await updateDoc(doc(db,"users",me.uid),{displayName,bio,status,photoURL:photoData,readReceipts,updatedAt:serverTimestamp()});
+   const opacity=Number($("wallpaperOpacity").value);
+   localStorage.setItem("chatinges_wallpaper",wallpaperData);
+   localStorage.setItem("chatinges_wallpaper_opacity",String(opacity));
+   setWallpaper(wallpaperData,opacity/100);
    Object.assign(me,{displayName,bio,status,photoURL:photoData,readReceipts});renderMe();root.innerHTML="";
    if(chatId)$("chatHint").textContent="Pesan realtime · status baca "+(canRead()?"aktif":"dimatikan");
    toast("Profil dan pengaturan berhasil disimpan");
@@ -380,3 +440,13 @@ $("editBtn").onclick=()=>{
 </script>
 </body>
 </html>
+<style>
+.modal-title-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.modal-close{width:34px;height:34px;padding:0;border-radius:10px;background:var(--panel2);color:var(--text);font-size:20px}
+.wallpaper-preview{height:92px;border-radius:12px;border:1px solid var(--line);background-size:cover;background-position:center;margin-top:8px}
+.wallpaper-tools{display:flex;gap:8px;align-items:center}
+.wallpaper-tools input[type=file]{padding:8px}
+.wallpaper-range{display:flex;align-items:center;gap:10px}
+.wallpaper-range input{padding:0}
+body[data-theme="sky"] .online-dot{border-color:#fff}
+</style>
