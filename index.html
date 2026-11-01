@@ -4,13 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b1020">
-<title>CHATINGSES</title>
+<title>CHATINGSES — Chat Your Way</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#121b30;--panel2:#192641;--line:#293754;--text:#f4f7ff;--muted:#9aa9c3;--blue:#5c8cff;--blue2:#3568e8;--green:#48d6a2;--red:#ff7187}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea{font:inherit}button{border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 15px;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:wait}input,textarea{width:100%;background:#0c1528;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--text);outline:none}input:focus,textarea:focus{border-color:var(--blue)}.muted{color:var(--muted)}.hidden{display:none!important}.small{font-size:12px}.primary{background:var(--blue2)}.ghost{background:var(--panel2);border:1px solid var(--line)}.danger{background:#472334;border:1px solid #784052}
 #login{min-height:100dvh;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 0,#243e7a 0,transparent 58%),var(--bg)}.login-card{width:min(430px,100%);padding:28px;border:1px solid var(--line);border-radius:25px;background:#121b30ee;box-shadow:0 25px 80px #0008}.logo{font-weight:950;font-size:26px;letter-spacing:3px}.logo span,.brand span{color:#82a7ff}.login-card p{color:var(--muted);line-height:1.65}.field{margin:20px 0 12px}.field label{display:block;margin-bottom:8px;color:#cbd6eb;font-size:12px;font-weight:800;letter-spacing:1px}.wide{width:100%}
 #app{height:100dvh;max-width:1500px;margin:auto;padding:14px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px}.sidebar,.chat{min-height:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}.sidebar{display:flex;flex-direction:column}.side-head{padding:17px;border-bottom:1px solid var(--line)}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:950;letter-spacing:2px}.me{display:flex;align-items:center;gap:11px;margin-top:17px}.avatar{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#5c8cff,#a36be9);font-weight:850}.avatar img{width:100%;height:100%;object-fit:cover}.me-info{flex:1;min-width:0}.me-info strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.me-info small{color:var(--muted)}.status{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:20px;background:#22365d;color:#c5d7ff;font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.search{padding:13px 13px 6px}.section{padding:10px 16px 6px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:1.3px}.user-list{overflow:auto;padding:0 8px 12px}.user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:13px;cursor:pointer}.user:hover,.user.active{background:var(--panel2)}.user .avatar{width:39px;height:39px}.user-info{min-width:0;flex:1}.user-info strong{display:block;font-size:14px}.user-info small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.user-info .last{color:#c5d2e8;font-size:11px;margin-top:3px}.typing{color:#8fb3ff!important}.verified{color:#68a6ff;font-size:14px}.chat{display:flex;flex-direction:column}.empty{margin:auto;text-align:center;padding:28px;max-width:400px}.empty .symbol{font-size:58px}.empty h2{margin:10px 0 5px}.conversation{display:flex;flex:1;min-height:0;flex-direction:column}.chat-head{display:flex;align-items:center;gap:11px;padding:14px 17px;border-bottom:1px solid var(--line)}.chat-head .avatar{width:41px;height:41px}.peer{flex:1;min-width:0}.peer strong{display:block}.peer small{color:var(--muted)}.messages{flex:1;overflow:auto;padding:19px;display:flex;flex-direction:column;gap:10px}.bubble{max-width:min(78%,560px);align-self:flex-start;padding:10px 13px;background:var(--panel2);border:1px solid #2b3a59;border-radius:15px 15px 15px 4px;overflow-wrap:anywhere;white-space:pre-wrap}.bubble.mine{align-self:flex-end;background:#2854b9;border-color:#416dd0;border-radius:15px 15px 4px 15px}.bubble time{display:block;text-align:right;color:#c7d4ecaa;font-size:10px;margin-top:5px}.composer{display:flex;gap:8px;padding:13px;border-top:1px solid var(--line)}.composer input{flex:1;min-width:0}.hint{padding:0 15px 10px;color:var(--muted);font-size:11px}.toast{position:fixed;z-index:30;left:50%;bottom:24px;transform:translateX(-50%);max-width:90%;padding:11px 16px;border-radius:12px;background:#263653;border:1px solid #465b80;box-shadow:0 8px 30px #0008;text-align:center}.modal-backdrop{position:fixed;inset:0;background:#0009;display:grid;place-items:center;padding:18px;z-index:20}.modal{width:min(450px,100%);padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.modal h3{margin-top:0}.modal .field{margin:12px 0}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
 @media(max-width:720px){#app{display:block;padding:0;height:100dvh}.sidebar{height:100%;border:0;border-radius:0}.chat{display:none;height:100dvh;border:0;border-radius:0}.chat.mobile-open{display:flex}.sidebar.mobile-hide{display:none}.side-head{padding:14px}.messages{padding:13px}.chat-head{padding:11px}.bubble{max-width:88%}}
+
+/* THEME: DARK — clean, compact, understated */
+body[data-theme="dark"]{color-scheme:dark}
+body[data-theme="dark"] #app{grid-template-columns:340px minmax(0,1fr)}
+body[data-theme="dark"] .settings-gear{width:40px;height:40px;font-size:19px;border-radius:13px}
+
+/* THEME: FANTASY — midnight plum, soft gold, editorial layout */
+body[data-theme="fantasy"]{
+ color-scheme:dark;
+ --bg:#171321;--panel:#211b2d;--panel2:#30263e;--line:#4b3b58;
+ --text:#f5edf8;--muted:#b8a9c4;--blue:#b58bd0;--blue2:#8660a8;--green:#b8c99a;
+ background:
+  radial-gradient(ellipse at 12% 5%,#5b3d6844,transparent 34%),
+  radial-gradient(ellipse at 90% 90%,#9c754022,transparent 36%),var(--bg);
+}
+body[data-theme="fantasy"] #app{grid-template-columns:370px minmax(0,1fr);gap:18px;padding:18px}
+body[data-theme="fantasy"] .sidebar,body[data-theme="fantasy"] .chat{
+ border:1px solid #6c526f;border-radius:25px;
+ background:linear-gradient(155deg,#2b2238,#1e1a29 75%);
+ box-shadow:0 18px 48px #09060e66;
+}
+body[data-theme="fantasy"] .side-head{padding:23px 20px 19px;background:linear-gradient(145deg,#44304f66,transparent);border-bottom:1px solid #6c526f}
+body[data-theme="fantasy"] .topline{justify-content:center;position:relative;padding:5px 0 12px}
+body[data-theme="fantasy"] .brand{font-family:Georgia,serif;font-size:20px;letter-spacing:3px;color:#f0dfc5}
+body[data-theme="fantasy"] .brand span{color:#d5b98c}
+body[data-theme="fantasy"] #logoutBtn{position:absolute;right:0;top:0;padding:8px 10px}
+body[data-theme="fantasy"] .me{padding:14px;background:#ffffff08;border:1px solid #6c526f;border-radius:19px}
+body[data-theme="fantasy"] .avatar{background:linear-gradient(135deg,#9673a8,#c4a477)}
+body[data-theme="fantasy"] .status{background:#4a3a4d;color:#ead8c2}
+body[data-theme="fantasy"] .section{font-family:Georgia,serif;letter-spacing:2px;color:#d1b88e}
+body[data-theme="fantasy"] .chat-head{padding:19px 22px;background:linear-gradient(90deg,#49365155,transparent);border-bottom:1px solid #6c526f}
+body[data-theme="fantasy"] .bubble{background:#33283e;border-color:#5a4663}
+body[data-theme="fantasy"] .bubble.mine{background:#654b78;border-color:#9273a6}
+body[data-theme="fantasy"] .composer{padding:17px;background:#17132166}
+body[data-theme="fantasy"] .composer button{background:linear-gradient(135deg,#a783bd,#806095);color:#fff}
+body[data-theme="fantasy"] .settings-gear{position:absolute;left:18px;top:17px;width:40px;height:40px;border-radius:50%;font-size:19px;background:#4b3a54;border-color:#81688b}
+body[data-theme="fantasy"] .login-card{background:linear-gradient(145deg,#30243b,#1c1826);border-color:#6c526f}
+body[data-theme="fantasy"] .login-card .logo{font-family:Georgia,serif;color:#f0dfc5}
+
+/* THEME: SKY — airy light blue with a top-aligned workspace */
+body[data-theme="sky"]{
+ color-scheme:light;
+ --bg:#eaf3fb;--panel:#ffffff;--panel2:#edf5fc;--line:#d4e2ef;
+ --text:#24384c;--muted:#72869a;--blue:#6e9fc8;--blue2:#4d83b3;
+ --green:#4c9d86;--red:#c86c7c;background:linear-gradient(150deg,#e5f2fc,#f5f9fd 65%,#e5eff8);
+}
+body[data-theme="sky"] #app{grid-template-columns:300px minmax(0,1fr);gap:12px;padding:12px}
+body[data-theme="sky"] .sidebar,body[data-theme="sky"] .chat{background:#ffffffed;border:1px solid #d6e5f2;border-radius:18px;box-shadow:0 9px 28px #8daec51a}
+body[data-theme="sky"] .side-head{padding:14px 16px;background:linear-gradient(115deg,#e8f4fd,#fff);border-bottom:1px solid var(--line)}
+body[data-theme="sky"] .brand{color:#385a78;letter-spacing:1.7px}
+body[data-theme="sky"] .brand span{color:#79a9d1}
+body[data-theme="sky"] .avatar{background:linear-gradient(135deg,#8fc0e3,#a8cbdc);color:#23415c}
+body[data-theme="sky"] .status{background:#e5f2fc;color:#547b9b}
+body[data-theme="sky"] input,body[data-theme="sky"] textarea{background:#f7fbff;color:#24384c;border-color:#d4e2ef}
+body[data-theme="sky"] .ghost{background:#f1f7fc;color:#456784;border-color:#d5e4f0}
+body[data-theme="sky"] .user:hover,body[data-theme="sky"] .user.active{background:#eaf4fc}
+body[data-theme="sky"] .user-info .last{color:#607d96}
+body[data-theme="sky"] .chat-head{background:#f5faff;border-bottom:1px solid #dce9f3}
+body[data-theme="sky"] .messages{background:linear-gradient(180deg,#f7fbff,#edf5fb)}
+body[data-theme="sky"] .bubble{background:#fff;border-color:#dce8f1;color:#2e4357;box-shadow:0 3px 10px #8aa9c014}
+body[data-theme="sky"] .bubble.mine{background:#dceefa;border-color:#c3dfef;color:#274b68}
+body[data-theme="sky"] .bubble time{color:#718ba0}
+body[data-theme="sky"] .composer{background:#fff;border-top:1px solid #dce9f3}
+body[data-theme="sky"] .composer button{background:#6e9fc8}
+body[data-theme="sky"] .settings-gear{width:38px;height:38px;border-radius:12px;background:#e8f3fb;color:#527d9e;border-color:#d3e4f1}
+body[data-theme="sky"] .login-card{background:#ffffffed;border-color:#d4e4f0;box-shadow:0 18px 60px #6b94b322}
+body[data-theme="sky"] .login-card .logo{color:#365b7a}
+body[data-theme="sky"] .modal{background:#fff;color:#24384c;border-color:#d4e2ef}
+body[data-theme="sky"] .toast{background:#fff;color:#24384c;border-color:#d4e2ef}
+.settings-gear{flex:none;display:grid;place-items:center;padding:0;line-height:1}
+.theme-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0 20px}
+.theme-choice{padding:12px 8px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);color:var(--text);text-align:center}
+.theme-choice strong{display:block;font-size:13px;margin-top:7px}
+.theme-choice small{display:block;font-size:10px;color:var(--muted);font-weight:500}
+.theme-choice.active{outline:2px solid var(--blue);border-color:var(--blue)}
+.theme-swatch{height:31px;border-radius:9px;border:1px solid #ffffff30}
+.theme-swatch.dark{background:linear-gradient(135deg,#0b1020 50%,#263c67 50%)}
+.theme-swatch.fantasy{background:linear-gradient(135deg,#211b2d 50%,#9b7956 50%)}
+.theme-swatch.sky{background:linear-gradient(135deg,#eaf3fb 50%,#8eb8d8 50%)}
+.settings-section-title{font-size:11px;letter-spacing:1.2px;font-weight:850;color:var(--muted);margin-top:15px}
+@media(max-width:720px){
+ body[data-theme="fantasy"] #app,body[data-theme="sky"] #app{padding:0;gap:0}
+ body[data-theme="fantasy"] .sidebar,body[data-theme="sky"] .sidebar{border-radius:0}
+ body[data-theme="fantasy"] .chat,body[data-theme="sky"] .chat{border-radius:0}
+ body[data-theme="fantasy"] .settings-gear{left:12px;top:12px}
+}
+
 </style>
 </head>
 <body>
@@ -27,7 +114,7 @@
  <aside class="sidebar" id="sidebar">
   <div class="side-head">
    <div class="topline"><div class="brand">CHAT<span>INGSES</span></div><button class="ghost small" id="logoutBtn">Logout</button></div>
-   <div class="me"><div class="avatar" id="myAvatar">?</div><div class="me-info"><strong id="myName">Pengguna</strong><small id="myHandle">@username</small><div class="status" id="myStatus">Belum ada status</div></div><button class="ghost small" id="editBtn">Edit</button></div>
+   <div class="me"><div class="avatar" id="myAvatar">?</div><div class="me-info"><strong id="myName">Pengguna</strong><small id="myHandle">@username</small><div class="status" id="myStatus">Belum ada status</div></div><button class="ghost settings-gear" id="editBtn" aria-label="Pengaturan" title="Pengaturan">⚙</button></div>
   </div>
   <div class="search"><input id="search" placeholder="Cari username pengguna..."></div>
   <div class="section" id="listTitle">PENGGUNA</div>
@@ -220,9 +307,27 @@ $("sendForm").onsubmit=async event=>{
 };
 $("backBtn").onclick=()=>{$("sidebar").classList.remove("mobile-hide");$("chatPanel").classList.remove("mobile-open")};
 $("profileBtn").onclick=()=>{if(peer)alert(`${peer.displayName||peer.username} (@${peer.username})\n${peer.bio||"Belum ada bio"}\nStatus: ${peer.status||"-"}`)};
+
+const THEMES=["dark","fantasy","sky"];
+function applyTheme(theme,save=true){
+ const selected=THEMES.includes(theme)?theme:"dark";
+ document.body.dataset.theme=selected;
+ document.querySelector('meta[name="theme-color"]')?.setAttribute("content",selected==="sky"?"#eaf3fb":selected==="fantasy"?"#211b2d":"#0b1020");
+ if(save) localStorage.setItem("chatinges_theme",selected);
+ document.querySelectorAll("[data-theme-choice]").forEach(btn=>btn.classList.toggle("active",btn.dataset.themeChoice===selected));
+}
+applyTheme(localStorage.getItem("chatinges_theme")||"dark",false);
+
 $("editBtn").onclick=()=>{
  const root=$("modalRoot");
- root.innerHTML=`<div class="modal-backdrop"><div class="modal"><h3>Edit profil & pengaturan</h3>
+ root.innerHTML=`<div class="modal-backdrop"><div class="modal"><h3>⚙ Pengaturan CHATINGSES</h3>
+ <div class="settings-section-title">PILIH TEMA TAMPILAN</div>
+ <div class="theme-options">
+  <button type="button" class="theme-choice" data-theme-choice="dark"><div class="theme-swatch dark"></div><strong>Dark</strong><small>Minimal & tenang</small></button>
+  <button type="button" class="theme-choice" data-theme-choice="fantasy"><div class="theme-swatch fantasy"></div><strong>Fantasy</strong><small>Elegan & hangat</small></button>
+  <button type="button" class="theme-choice" data-theme-choice="sky"><div class="theme-swatch sky"></div><strong>Sky</strong><small>Cerah & ringan</small></button>
+ </div>
+ <div class="settings-section-title">PROFIL</div>
  <div class="field"><label>NAMA TAMPILAN</label><input id="editName" maxlength="40" value="${esc(me.displayName||me.username)}"></div>
  <div class="field"><label>BIO</label><textarea id="editBio" maxlength="160" rows="2">${esc(me.bio||"")}</textarea></div>
  <div class="field"><label>STATUS</label><input id="editStatus" maxlength="80" value="${esc(me.status||"")}" placeholder="Sedang apa hari ini?"></div>
@@ -231,6 +336,10 @@ $("editBtn").onclick=()=>{
  <label style="display:flex;gap:9px;align-items:center;margin:14px 0"><input id="notifToggle" type="checkbox" style="width:auto" ${("Notification" in window&&Notification.permission==="granted")?"checked":""}> Izinkan notifikasi browser</label>
  <p class="muted small">Foto dikompres dan disimpan di Firestore. Notifikasi saat situs terbuka didukung; notifikasi saat Chrome tertutup perlu konfigurasi Push server.</p>
  <div class="modal-actions"><button class="ghost" id="cancelEdit">Batal</button><button id="saveEdit">Simpan</button></div></div></div>`;
+ root.querySelectorAll("[data-theme-choice]").forEach(btn=>{
+  btn.onclick=()=>applyTheme(btn.dataset.themeChoice);
+ });
+ applyTheme(localStorage.getItem("chatinges_theme")||"dark",false);
  let photoData=me.photoURL||"";
  $("photoFile").onchange=e=>{
   const file=e.target.files?.[0];if(!file)return;
